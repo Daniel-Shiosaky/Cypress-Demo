@@ -31,21 +31,16 @@ Cypress.Commands.add("logingWithFixtures", function () {
 })
 Cypress.Commands.add("loginWithEnvVariables", function () {
 
-    return cy.fixture('users').then(function (data) {
-        this.data = data
+    const email = Cypress.env('email')
+    const pwd = Cypress.env('password')
+    cy.get('#email')
+        .type(email)
 
-        const email = this.data.user1.email
-        const pwd = this.data.user1.password
-        cy.get('#email')
-            .type(email)
+    cy.get('#passwd')
+        .type(pwd)
 
-        cy.get('#passwd')
-            .type(pwd)
-
-        cy.get('#SubmitLogin')
-            .click()
-
-    })
+    cy.get('#SubmitLogin')
+        .click()
 
 })
 //
