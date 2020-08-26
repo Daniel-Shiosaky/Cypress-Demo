@@ -1,1 +1,11 @@
-{}
+{
+    "defaultCommandTimeout": 8000,
+    "pageLoadTimeout": 30000,
+    "experimentalFetchPolyfill": true,
+    "env": {
+        "home_url": "http://automationpractice.com/",
+        "authentication_url": "http://automationpractice.com/index.php?controller=authentication&back=my-account",
+        "email": "test+2@test.com",
+        "password": "Test123"
+    }
+}
